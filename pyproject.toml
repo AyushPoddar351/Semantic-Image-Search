@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "prj-5-semantic-image-search"
 version = "0.1.0"
@@ -6,25 +10,31 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "coloredlogs>=15.0.1",
-    "fastapi>=0.121.3",
-    "huggingface-hub>=1.1.5",
-    "ipykernel>=7.1.0",
+    "fastapi>=0.122.0",
+    "huggingface-hub>=1.1.6",
     "ipython>=9.7.0",
     "langchain-astradb>=0.6,<0.7",
     "langchain-community>=0.3.31",
     "langchain-core>=0.3.80",
     "langchain-experimental>=0.3.4",
+    "langchain-google-genai>=2.1.12",
     "langchain-huggingface>=0.3.1",
     "langchain-openai>=0.3.35",
     "langchain-qdrant>=0.2.1",
     "nest-asyncio>=1.6.0",
     "open-clip-torch>=3.2.0",
     "pillow>=12.0.0",
-    "pydantic>=2.12.4",
+    "pydantic>=2.12.5",
     "python-dotenv>=1.2.1",
     "python-multipart>=0.0.6",
     "requests>=2.32.5",
     "streamlit>=1.51.0",
+    "structlog>=25.5.0",
     "torch>=2.9.1",
     "uvicorn>=0.38.0",
 ]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["semantic_image_search*"]
+exclude = ["SS*", "Notes*", "sementic-image-search*"]

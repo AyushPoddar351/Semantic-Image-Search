@@ -19,3 +19,5 @@ open_clip_torch
 torch
 python-multipart>=0.0.6
 langchain-qdrant
+langchain_google_genai
+structlog
