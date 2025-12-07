@@ -78,6 +78,13 @@ class Config:
     if not OPENAI_API_KEY:
         log.warning("OPENAI_API_KEY missing")
 
+    # ------------------- GOOGLE -------------------
+    GOOGLE_MODEL: str = os.getenv("GOOGLE_MODEL", "gemini-2.5-pro")
+    log.info("GOOGLE_MODEL loaded", value=GOOGLE_MODEL)
+
+    GOOGLE_API_KEY: str = os.getenv("GOOGLE_API_KEY")
+    if not GOOGLE_API_KEY:
+        log.warning("GOOGLE_API_KEY missing")
 
 # ------------------------------------------------------------
 # 7) Final global config success log
