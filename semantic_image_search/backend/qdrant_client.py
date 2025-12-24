@@ -65,7 +65,7 @@ class QdrantClientManager:
 
                 client.create_collection(
                     collection_name=Config.QDRANT_COLLECTION,
-                    vectors={
+                    vectors_config={
                         "default": models.VectorParams(
                             size=Config.VECTOR_SIZE,
                             distance=models.Distance.COSINE,

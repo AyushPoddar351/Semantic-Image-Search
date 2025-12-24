@@ -53,7 +53,7 @@ class IndexService:
                 points=[
                     models.PointStruct(
                         id=str(uuid4()),
-                        vector=vec,
+                        vector={"default": vec},
                         payload=payload,
                     )
                 ],
@@ -102,7 +102,7 @@ class IndexService:
                 points = [
                     models.PointStruct(
                         id=str(uuid4()),
-                        vector=vector,
+                        vector={"default": vector},
                         payload=payload,
                     )
                     for vector, payload in zip(vectors, payloads)

@@ -83,6 +83,7 @@ class ImageSearchService:
             results = self.client.query_points(
                 collection_name=self.collection,
                 query=vector,
+                using="default",
                 limit=k,
                 with_payload=True,
                 with_vectors=False
@@ -138,6 +139,7 @@ class ImageSearchService:
             results = self.client.query_points(
                 collection_name=self.collection,
                 query=vector,
+                using="default",
                 limit=k,
                 with_payload=True,
                 with_vectors=False

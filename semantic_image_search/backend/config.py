@@ -86,6 +86,14 @@ class Config:
     if not GOOGLE_API_KEY:
         log.warning("GOOGLE_API_KEY missing")
 
+    # ------------------- GROQ ---------------------
+    GROQ_MODEL: str = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+    log.info("GROQ_MODEL loaded", value=GROQ_MODEL)
+
+    GROQ_API_KEY: str = os.getenv("GROQ_API_KEY")
+    if not GROQ_API_KEY:
+        log.warning("GROQ_API_KEY missing")
+
 # ------------------------------------------------------------
 # 7) Final global config success log
 # ------------------------------------------------------------
